@@ -1,7 +1,8 @@
+// import { createReducer } from "../../app/common/Util/reducerUtils"
 import { createReducer } from '../../app/common/Util/reducerUtils';
 import { CREATE_EVENT, UPDATE_EVENT, DELETE_EVENT } from './eventConstants';
 
-const InitialState = [
+const initialState = [
   {
     id: '1',
     title: 'Trip to Tower of London',
@@ -67,7 +68,7 @@ const deleteEvent = (state, payload) => {
   return [...state.filter(event => event.id !== payload.eventId)];
 };
 
-export default createReducer(InitialState, {
+export default createReducer(initialState, {
   [CREATE_EVENT]: createEvent,
   [UPDATE_EVENT]: updateEvent,
   [DELETE_EVENT]: deleteEvent
