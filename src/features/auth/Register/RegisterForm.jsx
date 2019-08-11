@@ -26,7 +26,7 @@ const RegisterForm = () => {
             component={TextInput}
             placeholder="Password"
           />
-          <Button fluid size="large" color="teal">
+          <Button fluid size="large" color="red">
             Register
           </Button>
         </Segment>
@@ -35,4 +35,4 @@ const RegisterForm = () => {
   );
 };
 
-export default reduxForm({form: 'registerForm'})(RegisterForm);
+export default reduxForm({ form: 'registerForm' })(RegisterForm);
